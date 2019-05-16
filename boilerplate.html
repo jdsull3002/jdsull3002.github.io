@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=1024, user-scalable=no">
+
+    <title>Your deck.js Presentation</title>
+
+    <!-- Required stylesheet -->
+    <link rel="stylesheet" media="screen" href="core/deck.core.css">
+
+    <!-- Extension CSS files go here. Remove or add as needed. -->
+    <link rel="stylesheet" media="screen" href="extensions/goto/deck.goto.css">
+    <link rel="stylesheet" media="screen" href="extensions/menu/deck.menu.css">
+    <link rel="stylesheet" media="screen" href="extensions/navigation/deck.navigation.css">
+    <link rel="stylesheet" media="screen" href="extensions/status/deck.status.css">
+    <link rel="stylesheet" media="screen" href="extensions/scale/deck.scale.css">
+    <!-- Style theme. More available in /themes/style/ or create your own. -->
+    <link rel="stylesheet" media="screen" href="themes/style/swiss.css">
+
+    <!-- Transition theme. More available in /themes/transition/ or create your own. -->
+    <link rel="stylesheet" media="screen" href="themes/transition/horizontal-slide.css">
+
+    <!--    custom stuff-->
+    <link rel="stylesheet" media="screen" href="themes/locals.css">
+    <!-- Basic black and white print styles -->
+    <link rel="stylesheet" media="print" href="core/print.css">
+
+    <!-- Required Modernizr file -->
+    <script src="modernizr.custom.js"></script>
+</head>
+<body>
+<div class="deck-container">
+    <!-- Begin slides. Just make elements with a class of slide. -->
+    <section class="slide clearfix">
+        <h1>How <span class="gulp_orange">Gulp</span> and <span class="sass_pink">SASS</span> Can Ease your Workload and
+            Save your world*</h1>
+        <div class="logo">
+            <img src="images/463px-Gulp.js_Logo.svg.png" alt="gulp logo">
+        </div>
+        <div class="logo">
+            <img src="images/sass-logo-new.png" alt="sass logo">
+        </div>
+        <p class="disclaimer">*Your mileage may vary. Hyperbole is not guarantee of future performance.</p>
+    </section>
+<!--GULP-->
+    <section class="slide" style="background: url(images/463px-Gulp.js_Logo.svg.png) center center no-repeat">
+        <h1>1. Gulp</h1>
+    </section>
+
+    <section class="slide">
+        <h2>What is Gulp?</h2>
+        <p>Gulp is a NodeJS tool which runs tasks on files on command or at specified intervals.</p>
+        <p>Those intervals can be:</p>
+        <ul>
+            <li>When invoked by the IDE Events such as Project Open or Build (aka Bindings)</li>
+            <li>When a specific subset of files have saved changes: Watch tasks</li>
+            <li>On command by interacting with the task</li>
+        </ul>
+        <br>
+        <p>What tools (IDEs) offer support?</p>
+        <ul>
+            <li>Visual Studio - Windows</li>
+            <li>JetBrains Rider - Universal</li>
+            <li>VS Code - command line through terminal is more reliable.</li>
+            <li>Command Line (bash, power shell)</li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>Visual Studio</h2>
+        <ul>
+            <li>Support is provided by the Task Runner Explorer.</li>
+            <li>Tasks can be bound by IDE events or Manually invoked.</li>
+        </ul>
+        <div style="margin-left: 30px;">
+            <figure>
+                <a href="/images/task-runner-menu.PNG" target="_blank">
+                    <img src="/images/task-runner-menu.PNG">
+                </a>
+                <figcaption>Navigate to the Task Runner Explorer</figcaption>
+            </figure>
+            <figure>
+                <img src="/images/task-runner.png">
+                <figcaption>Task Bindings in VS 2017</figcaption>
+            </figure>
+            <figure>
+                <img src="/images/task-run-by-command.png">
+                <figcaption>Manually Running a Task in VS 2017</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <section class="slide clearfix">
+        <h2>JetBrains' Rider</h2>
+        <ul>
+            <li>Support is provided by the IDE and can be tricky to locate.</li>
+            <li>Again, tasks can be bound by IDE events or Manually invoked.</li>
+        </ul>
+
+        <div style="margin-left: 30px; float: left; width: 45%;">
+            <h3>Bindings</h3>
+            <figure>
+                <a href="/images/rider-tasks.png" target="_blank">
+                    <img src="/images/rider-tasks.png" width="50%">
+                </a>
+                <figcaption>Bound to Solution Open</figcaption>
+            </figure>
+            <figure>
+                <a href="/images/rider-buildTask.PNG" target="_blank">
+                    <img src="/images/rider-buildTask.PNG" width="50%">
+                </a>
+                <figcaption>Bound to Project Build</figcaption>
+            </figure>
+        </div>
+        <div style="margin-left: 30px;">
+            <h3>Manual</h3>
+            <figure>
+                <a href="/images/rider-revealTasks.PNG" target="_blank">
+                    <img src="/images/rider-revealTasks.PNG" width="50%">
+                </a>
+                <figcaption>Open the Gulp Task Palette</figcaption>
+            </figure>
+            <figure>
+                <a href="/images/rider-taskPalette.PNG" target="_blank">
+                    <img src="/images/rider-taskPalette.PNG">
+                </a>
+                <figcaption>Click on a Task to run it.</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <section class="slide clearfix">
+        <h2>Command Line support</h2>
+        <h3>Tool support</h3>
+        <ul>
+            <li>Bash native or via GitBash</li>
+            <li>Powershell</li>
+        </ul>
+
+        <div class="clearfix">
+            <div style="margin-left: 30px; float: left; width: 45%;">
+                <h4>Bash (only have windows flavored captures)</h4>
+                <figure>
+                    <a href="/images/ubuntu-subsytem.PNG" target="_blank">
+                        <img src="/images/ubuntu-subsytem.PNG" width="50%">
+                    </a>
+                    <figcaption>Windows Ubuntu subsystem</figcaption>
+                </figure>
+                <figure>
+                    <a href="/images/command-line-bash.PNG" target="_blank">
+                        <img src="/images/command-line-bash.PNG" width="50%">
+                    </a>
+                    <figcaption>GitBash</figcaption>
+                </figure>
+            </div>
+            <div style="margin-left: 30px;">
+                <h4>Powershell</h4>
+                <figure>
+                    <a href="/images/command-line-ps.PNG" target="_blank">
+                        <img src="/images/command-line-ps.PNG" width="50%">
+                    </a>
+                    <figcaption>Using Powershell</figcaption>
+                </figure>
+            </div>
+        </div>
+        <h3>Caveats</h3>
+        <ul>
+            <li>You have to know which command you want to invoke.</li>
+            <li>No automagical task running locally. Deployment has a scritpt to run the `deployment` task as part of
+                the roll-out process.
+            </li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>How does it work?</h2>
+        <div>
+            <p>A Gulp file (gulpfile.js) is written and added to the root of the project. That file contains the series
+                of tasks a developer
+                wants run and the criteria in which to run the task. All of this is performed by NodeJS behind the
+                scenes.</p>
+            <ul>
+                <li>Concatenate a series of CSS files and add sourceMaps to them.
+                    <a href="images/css-task.PNG" target="_blank">
+                        <img class="align-left"
+                             src="images/css-task.PNG"/>
+                    </a>
+                </li>
+                <li>When a specific subset of files have saved changes, perform a series of tasks
+                    <a href="images/watchers.PNG" target="_blank">
+                        <img class="align-left"
+                             src="images/watchers.PNG"/>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="slide">
+        <h2>Why should we use it?</h2>
+        <ul>
+            <li>File Watching</li>
+            <li>Source Maps</li>
+            <li>Ability to Extend functionality without disrupting deployment process
+                <br>
+                EX: Next Steps are SASS for CSS and ESLint for JS code quality
+            </li>
+            <li>Cross Architecture Reliability</li>
+        </ul>
+    </section>
+
+    <section class="slide">
+        <h2>How to learn more?</h2>
+        <ul>
+            <li>We are eager to teach to speed adoption. Please ask!</li>
+            <li>Online Resources:
+                <ul>
+                    <li>
+                        <a href="https://gulpjs.com/">Gulp Documentation</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <p></p>
+
+    </section>
+
+<!--    SASS-->
+    <section class="slide" style="background:url(images/sass-logo-new.png) center center no-repeat">
+        <h1>2. SASS</h1>
+    </section>
+
+    <section class="slide">
+        <h2>What is SASS?</h2>
+        <p>I'm going to crib from another article from 2014:
+            <a href="https://htmlmag.com/article/an-introduction-to-css-preprocessors-sass-less-stylus">An Introduction to CSS Pre-Processors: SASS, LESS and Stylus</a></p>
+    </section>
+
+    <section class="slide">
+        <h2>How does it work?</h2>
+
+    </section>
+
+    <section class="slide">
+        <h2>Resources</h2>
+        <p>Here is a short list of some of the resources available to learn SASS:</p>
+        <ul>
+            <li><a href="http://trysass.com/" target="_blank">Try Sass</a></li>
+            <li><a href="https://www.sassmeister.com" target="_blank">SassMeister</a></li>
+            <li><a href="https://www.pluralsight.com/courses/code-school-assembling-sass" target="_blank">PluralSight</a></li>
+            <li><a href="https://www.youtube.com/results?search_query=SASS" target="_blank">YouTube</a></li>
+            <li><a href="https://sass-lang.com/documentation/file.SASS_REFERENCE.html" target="_blank">And when all else fails: RTFM</a></li>
+        </ul>
+    </section>
+    <section class="slide">
+        <h1>Questions. Comments?</h1>
+    </section>
+
+    <section class="slide">
+        <h1>Thank you </h1>
+    </section>
+
+    <!-- End slides. -->
+
+    <!-- Begin extension snippets. Add or remove as needed. -->
+
+    <!-- deck.navigation snippet -->
+    <div aria-role="navigation">
+        <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+        <a href="#" class="deck-next-link" title="Next">&#8594;</a>
+    </div>
+
+    <!-- deck.status snippet -->
+    <p class="deck-status" aria-role="status">
+        <span class="deck-status-current"></span>
+        /
+        <span class="deck-status-total"></span>
+    </p>
+
+    <!-- deck.goto snippet -->
+    <form action="." method="get" class="goto-form">
+        <label for="goto-slide">Go to slide:</label>
+        <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+        <datalist id="goto-datalist"></datalist>
+        <input type="submit" value="Go">
+    </form>
+
+    <!-- End extension snippets. -->
+</div>
+
+<!-- Required JS files. -->
+<script src="jquery.min.js"></script>
+<script src="core/deck.core.js"></script>
+
+<!-- Extension JS files. Add or remove as needed. -->
+<script src="extensions/menu/deck.menu.js"></script>
+<script src="extensions/goto/deck.goto.js"></script>
+<script src="extensions/status/deck.status.js"></script>
+<script src="extensions/navigation/deck.navigation.js"></script>
+<script src="extensions/scale/deck.scale.js"></script>
+
+<!-- Initialize the deck. You can put this in an external file if desired. -->
+<script>
+    $(function () {
+        $.deck('.slide');
+    });
+</script>
+</body>
+</html>
